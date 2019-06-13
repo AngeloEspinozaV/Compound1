@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.8841441692536106 0.45268962050864253 0.11559063741749977 0.5623025817794941
-  position 0.4979462316401963 1.056883510123995 0.9594170112600116
+  orientation -0.7263760864071896 0.6651807378561437 0.17295192129875592 0.6874818506144236
+  position 0.6744582737218155 0.9013159242086254 1.1319103562530488
 }
 TexturedBackground {
 }
@@ -14,7 +14,7 @@ Floor {
 Solid {
   translation 0 0.15 0
   children [
-    Group {
+    DEF GR_FRAME Group {
       children [
         Shape {
           appearance PBRAppearance {
@@ -24,12 +24,12 @@ Solid {
           }
           geometry Cylinder {
             height 0.3
-            radius 0.01
+            radius 0.02
           }
         }
         Transform {
-          translation 0 0.15 0
-          rotation 0 0 1 0.2617993870000007
+          translation 0 0.2 0
+          rotation 0 0 1 0
           children [
             Shape {
               appearance PBRAppearance {
@@ -38,7 +38,7 @@ Solid {
                 metalness 0
               }
               geometry Sphere {
-                radius 0.015
+                radius 0.05
                 subdivision 2
               }
             }
@@ -47,4 +47,7 @@ Solid {
       ]
     }
   ]
+  boundingObject USE GR_FRAME
+  physics Physics {
+  }
 }
