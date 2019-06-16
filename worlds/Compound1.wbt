@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.8692078768091134 -0.4850377241007856 -0.09600038068738764 5.8354088854858235
-  position 0.5057299108181955 1.1859428918402457 2.4414540707066563
+  orientation 0.24988245647754156 0.9498503099242168 0.18799773052252214 4.943415876456483
+  position -2.3546526650472717 1.4283649044523916 0.9687286570773034
 }
 TexturedBackground {
 }
@@ -128,6 +128,88 @@ Solid {
         Transform {
           translation 0.15 -0.15 0
           rotation 0 0 1 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 1
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.3
+                radius 0.02
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0.15 -0.15
+          rotation 1 0 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 1
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.3
+                radius 0.02
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0.15 -0.3
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.05
+                subdivision 2
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0 -0.3
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 1
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.3
+                radius 0.02
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 -0.15 -0.3
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.05
+                subdivision 2
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 -0.15 -0.15
+          rotation 1 0 0 1.5708
           children [
             Shape {
               appearance PBRAppearance {
